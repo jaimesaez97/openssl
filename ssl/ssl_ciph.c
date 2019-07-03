@@ -44,8 +44,9 @@
 /*
 #define SSL_ENC_ARIA128GCM_IDX  20
 #define SSL_ENC_ARIA256GCM_IDX  21
-#define SSL_ENC_NUM_IDX         22
 */
+#define SSL_ENC_NUM_IDX         22
+
 
 /* NB: make sure indices in these tables match values above */
 
@@ -2112,7 +2113,7 @@ int ssl_cipher_get_overhead(const SSL_CIPHER *c, size_t *mac_overhead,
 
     /* Some hard-coded numbers for the CCM/Poly1305 MAC overhead
      * because there are no handy #defines for those. */
-    if (c->algorithm_enc & (SSL_AESGCM | SSL_ARIAGCM)) {
+    if (c->algorithm_enc & (SSL_AESGCM/* | SSL_ARIAGCM*/)) {
         out = EVP_GCM_TLS_EXPLICIT_IV_LEN + EVP_GCM_TLS_TAG_LEN;
     } else if (c->algorithm_enc & (SSL_AES128CCM | SSL_AES256CCM)) {
         out = EVP_CCM_TLS_EXPLICIT_IV_LEN + 16;
