@@ -2916,6 +2916,7 @@ static SSL_CIPHER ssl3_ciphers[] = {
      },
 #endif                          /* OPENSSL_NO_WEAK_SSL_CIPHERS */
 
+/*
 #ifndef OPENSSL_NO_ARIA
     {
      1,
@@ -3174,6 +3175,7 @@ static SSL_CIPHER ssl3_ciphers[] = {
      256,
      },
 #endif /* OPENSSL_NO_ARIA */
+
 };
 
 /*

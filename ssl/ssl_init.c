@@ -27,10 +27,12 @@ DEFINE_RUN_ONCE_STATIC(ossl_init_ssl_base)
     fprintf(stderr, "OPENSSL_INIT: ossl_init_ssl_base: "
             "Adding SSL ciphers and digests\n");
 #endif
+/*
 #ifndef OPENSSL_NO_DES
     EVP_add_cipher(EVP_des_cbc());
     EVP_add_cipher(EVP_des_ede3_cbc());
 #endif
+*/
 #ifndef OPENSSL_NO_IDEA
     EVP_add_cipher(EVP_idea_cbc());
 #endif
@@ -59,10 +61,12 @@ DEFINE_RUN_ONCE_STATIC(ossl_init_ssl_base)
     EVP_add_cipher(EVP_aes_256_cbc_hmac_sha1());
     EVP_add_cipher(EVP_aes_128_cbc_hmac_sha256());
     EVP_add_cipher(EVP_aes_256_cbc_hmac_sha256());
+/*
 #ifndef OPENSSL_NO_ARIA
     EVP_add_cipher(EVP_aria_128_gcm());
     EVP_add_cipher(EVP_aria_256_gcm());
 #endif
+*/
 #ifndef OPENSSL_NO_CAMELLIA
     EVP_add_cipher(EVP_camellia_128_cbc());
     EVP_add_cipher(EVP_camellia_256_cbc());

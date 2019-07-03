@@ -191,6 +191,7 @@ void openssl_add_all_ciphers_int(void)
     EVP_add_cipher(EVP_aes_128_cbc_hmac_sha256());
     EVP_add_cipher(EVP_aes_256_cbc_hmac_sha256());
 
+/*
 #ifndef OPENSSL_NO_ARIA
     EVP_add_cipher(EVP_aria_128_ecb());
     EVP_add_cipher(EVP_aria_128_cbc());
@@ -226,6 +227,7 @@ void openssl_add_all_ciphers_int(void)
     EVP_add_cipher_alias(SN_aria_256_cbc, "ARIA256");
     EVP_add_cipher_alias(SN_aria_256_cbc, "aria256");
 #endif
+*/
 
 #ifndef OPENSSL_NO_CAMELLIA
     EVP_add_cipher(EVP_camellia_128_ecb());
