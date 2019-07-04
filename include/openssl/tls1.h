@@ -615,7 +615,7 @@ __owur int SSL_check_chain(SSL *s, X509 *x, EVP_PKEY *pk, STACK_OF(X509) *chain)
 
 
 /* Aria ciphersuites from RFC6209 */
-/*
+
 # define TLS1_CK_RSA_WITH_ARIA_128_GCM_SHA256             0x0300C050
 # define TLS1_CK_RSA_WITH_ARIA_256_GCM_SHA384             0x0300C051
 # define TLS1_CK_DHE_RSA_WITH_ARIA_128_GCM_SHA256         0x0300C052
@@ -642,7 +642,7 @@ __owur int SSL_check_chain(SSL *s, X509 *x, EVP_PKEY *pk, STACK_OF(X509) *chain)
 # define TLS1_CK_DHE_PSK_WITH_ARIA_256_GCM_SHA384         0x0300C06D
 # define TLS1_CK_RSA_PSK_WITH_ARIA_128_GCM_SHA256         0x0300C06E
 # define TLS1_CK_RSA_PSK_WITH_ARIA_256_GCM_SHA384         0x0300C06F
-*/
+
 
 /* a bundle of RFC standard cipher names, generated from ssl3_ciphers[] */
 # define TLS1_RFC_RSA_WITH_AES_128_SHA                   "TLS_RSA_WITH_AES_128_CBC_SHA"
@@ -1104,7 +1104,7 @@ __owur int SSL_check_chain(SSL *s, X509 *x, EVP_PKEY *pk, STACK_OF(X509) *chain)
 
 
 /* Aria ciphersuites from RFC6209 */
-/*
+
 # define TLS1_TXT_RSA_WITH_ARIA_128_GCM_SHA256             "ARIA128-GCM-SHA256"
 # define TLS1_TXT_RSA_WITH_ARIA_256_GCM_SHA384             "ARIA256-GCM-SHA384"
 # define TLS1_TXT_DHE_RSA_WITH_ARIA_128_GCM_SHA256         "DHE-RSA-ARIA128-GCM-SHA256"
@@ -1131,7 +1131,7 @@ __owur int SSL_check_chain(SSL *s, X509 *x, EVP_PKEY *pk, STACK_OF(X509) *chain)
 # define TLS1_TXT_DHE_PSK_WITH_ARIA_256_GCM_SHA384         "DHE-PSK-ARIA256-GCM-SHA384"
 # define TLS1_TXT_RSA_PSK_WITH_ARIA_128_GCM_SHA256         "RSA-PSK-ARIA128-GCM-SHA256"
 # define TLS1_TXT_RSA_PSK_WITH_ARIA_256_GCM_SHA384         "RSA-PSK-ARIA256-GCM-SHA384"
-*/
+
 
 # define TLS_CT_RSA_SIGN                 1
 # define TLS_CT_DSS_SIGN                 2

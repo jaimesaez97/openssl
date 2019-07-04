@@ -854,7 +854,7 @@ const EVP_CIPHER *EVP_aes_256_cbc_hmac_sha1(void);
 const EVP_CIPHER *EVP_aes_128_cbc_hmac_sha256(void);
 const EVP_CIPHER *EVP_aes_256_cbc_hmac_sha256(void);
 
-/*
+
 # ifndef OPENSSL_NO_ARIA
 const EVP_CIPHER *EVP_aria_128_ecb(void);
 const EVP_CIPHER *EVP_aria_128_cbc(void);
@@ -887,7 +887,7 @@ const EVP_CIPHER *EVP_aria_256_ofb(void);
 const EVP_CIPHER *EVP_aria_256_gcm(void);
 const EVP_CIPHER *EVP_aria_256_ccm(void);
 # endif
-*/
+
 
 # ifndef OPENSSL_NO_CAMELLIA
 const EVP_CIPHER *EVP_camellia_128_ecb(void);

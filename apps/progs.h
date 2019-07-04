@@ -9,21 +9,17 @@
  * in the file LICENSE in the source distribution or at
  * https://www.openssl.org/source/license.html
  */
-
 typedef enum FUNC_TYPE {
     FT_none, FT_general, FT_md, FT_cipher, FT_pkey,
     FT_md_alg, FT_cipher_alg
 } FUNC_TYPE;
-
 typedef struct function_st {
     FUNC_TYPE type;
     const char *name;
     int (*func)(int argc, char *argv[]);
     const OPTIONS *help;
 } FUNCTION;
-
 DEFINE_LHASH_OF(FUNCTION);
-
 extern int asn1parse_main(int argc, char *argv[]);
 extern int ca_main(int argc, char *argv[]);
 extern int ciphers_main(int argc, char *argv[]);
@@ -252,27 +248,69 @@ static FUNCTION functions[] = {
     {FT_cipher, "aes-192-ecb", enc_main, enc_options},
     {FT_cipher, "aes-256-cbc", enc_main, enc_options},
     {FT_cipher, "aes-256-ecb", enc_main, enc_options},
+#ifndef OPENSSL_NO_ARIA
     {FT_cipher, "aria-128-cbc", enc_main, enc_options},
+#endif
+#ifndef OPENSSL_NO_ARIA
     {FT_cipher, "aria-128-cfb", enc_main, enc_options},
+#endif
+#ifndef OPENSSL_NO_ARIA
     {FT_cipher, "aria-128-ctr", enc_main, enc_options},
+#endif
+#ifndef OPENSSL_NO_ARIA
     {FT_cipher, "aria-128-ecb", enc_main, enc_options},
+#endif
+#ifndef OPENSSL_NO_ARIA
     {FT_cipher, "aria-128-ofb", enc_main, enc_options},
+#endif
+#ifndef OPENSSL_NO_ARIA
     {FT_cipher, "aria-128-cfb1", enc_main, enc_options},
+#endif
+#ifndef OPENSSL_NO_ARIA
     {FT_cipher, "aria-128-cfb8", enc_main, enc_options},
+#endif
+#ifndef OPENSSL_NO_ARIA
     {FT_cipher, "aria-192-cbc", enc_main, enc_options},
+#endif
+#ifndef OPENSSL_NO_ARIA
     {FT_cipher, "aria-192-cfb", enc_main, enc_options},
+#endif
+#ifndef OPENSSL_NO_ARIA
     {FT_cipher, "aria-192-ctr", enc_main, enc_options},
+#endif
+#ifndef OPENSSL_NO_ARIA
     {FT_cipher, "aria-192-ecb", enc_main, enc_options},
+#endif
+#ifndef OPENSSL_NO_ARIA
     {FT_cipher, "aria-192-ofb", enc_main, enc_options},
+#endif
+#ifndef OPENSSL_NO_ARIA
     {FT_cipher, "aria-192-cfb1", enc_main, enc_options},
+#endif
+#ifndef OPENSSL_NO_ARIA
     {FT_cipher, "aria-192-cfb8", enc_main, enc_options},
+#endif
+#ifndef OPENSSL_NO_ARIA
     {FT_cipher, "aria-256-cbc", enc_main, enc_options},
+#endif
+#ifndef OPENSSL_NO_ARIA
     {FT_cipher, "aria-256-cfb", enc_main, enc_options},
+#endif
+#ifndef OPENSSL_NO_ARIA
     {FT_cipher, "aria-256-ctr", enc_main, enc_options},
+#endif
+#ifndef OPENSSL_NO_ARIA
     {FT_cipher, "aria-256-ecb", enc_main, enc_options},
+#endif
+#ifndef OPENSSL_NO_ARIA
     {FT_cipher, "aria-256-ofb", enc_main, enc_options},
+#endif
+#ifndef OPENSSL_NO_ARIA
     {FT_cipher, "aria-256-cfb1", enc_main, enc_options},
+#endif
+#ifndef OPENSSL_NO_ARIA
     {FT_cipher, "aria-256-cfb8", enc_main, enc_options},
+#endif
 #ifndef OPENSSL_NO_CAMELLIA
     {FT_cipher, "camellia-128-cbc", enc_main, enc_options},
 #endif

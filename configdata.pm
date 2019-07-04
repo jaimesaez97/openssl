@@ -34,7 +34,7 @@ our %config = (
   bn_ll => "0",
   build_file => "Makefile",
   build_file_templates => [ "Configurations/common0.tmpl", "Configurations/unix-Makefile.tmpl", "Configurations/common.tmpl" ],
-  build_infos => [ "./build.info", "crypto/build.info", "ssl/build.info", "engines/build.info", "apps/build.info", "test/build.info", "util/build.info", "tools/build.info", "fuzz/build.info", "crypto/objects/build.info", "crypto/md4/build.info", "crypto/md5/build.info", "crypto/sha/build.info", "crypto/mdc2/build.info", "crypto/hmac/build.info", "crypto/ripemd/build.info", "crypto/whrlpool/build.info", "crypto/poly1305/build.info", "crypto/blake2/build.info", "crypto/siphash/build.info", "crypto/sm3/build.info", "crypto/des/build.info", "crypto/aes/build.info", "crypto/rc2/build.info", "crypto/rc4/build.info", "crypto/idea/build.info", "crypto/bf/build.info", "crypto/cast/build.info", "crypto/camellia/build.info", "crypto/seed/build.info", "crypto/sm4/build.info", "crypto/chacha/build.info", "crypto/modes/build.info", "crypto/bn/build.info", "crypto/ec/build.info", "crypto/rsa/build.info", "crypto/dsa/build.info", "crypto/dh/build.info", "crypto/sm2/build.info", "crypto/dso/build.info", "crypto/engine/build.info", "crypto/buffer/build.info", "crypto/bio/build.info", "crypto/stack/build.info", "crypto/lhash/build.info", "crypto/rand/build.info", "crypto/err/build.info", "crypto/evp/build.info", "crypto/asn1/build.info", "crypto/pem/build.info", "crypto/x509/build.info", "crypto/x509v3/build.info", "crypto/conf/build.info", "crypto/txt_db/build.info", "crypto/pkcs7/build.info", "crypto/pkcs12/build.info", "crypto/comp/build.info", "crypto/ocsp/build.info", "crypto/ui/build.info", "crypto/cms/build.info", "crypto/ts/build.info", "crypto/srp/build.info", "crypto/cmac/build.info", "crypto/ct/build.info", "crypto/async/build.info", "crypto/kdf/build.info", "crypto/store/build.info", "test/ossl_shim/build.info" ],
+  build_infos => [ "./build.info", "crypto/build.info", "ssl/build.info", "engines/build.info", "apps/build.info", "test/build.info", "util/build.info", "tools/build.info", "fuzz/build.info", "crypto/objects/build.info", "crypto/md4/build.info", "crypto/md5/build.info", "crypto/sha/build.info", "crypto/mdc2/build.info", "crypto/hmac/build.info", "crypto/ripemd/build.info", "crypto/whrlpool/build.info", "crypto/poly1305/build.info", "crypto/blake2/build.info", "crypto/siphash/build.info", "crypto/sm3/build.info", "crypto/des/build.info", "crypto/aes/build.info", "crypto/rc2/build.info", "crypto/rc4/build.info", "crypto/idea/build.info", "crypto/aria/build.info", "crypto/bf/build.info", "crypto/cast/build.info", "crypto/camellia/build.info", "crypto/seed/build.info", "crypto/sm4/build.info", "crypto/chacha/build.info", "crypto/modes/build.info", "crypto/bn/build.info", "crypto/ec/build.info", "crypto/rsa/build.info", "crypto/dsa/build.info", "crypto/dh/build.info", "crypto/sm2/build.info", "crypto/dso/build.info", "crypto/engine/build.info", "crypto/buffer/build.info", "crypto/bio/build.info", "crypto/stack/build.info", "crypto/lhash/build.info", "crypto/rand/build.info", "crypto/err/build.info", "crypto/evp/build.info", "crypto/asn1/build.info", "crypto/pem/build.info", "crypto/x509/build.info", "crypto/x509v3/build.info", "crypto/conf/build.info", "crypto/txt_db/build.info", "crypto/pkcs7/build.info", "crypto/pkcs12/build.info", "crypto/comp/build.info", "crypto/ocsp/build.info", "crypto/ui/build.info", "crypto/cms/build.info", "crypto/ts/build.info", "crypto/srp/build.info", "crypto/cmac/build.info", "crypto/ct/build.info", "crypto/async/build.info", "crypto/kdf/build.info", "crypto/store/build.info", "test/ossl_shim/build.info" ],
   build_type => "release",
   builddir => ".",
   cflags => [ "-Wa,--noexecstack" ],
@@ -94,18 +94,18 @@ our %config = (
       "RCFLAGS" => undef,
       "RM" => undef,
       "WINDRES" => undef,
-      "__CNF_CFLAGS" => undef,
-      "__CNF_CPPDEFINES" => undef,
-      "__CNF_CPPFLAGS" => undef,
-      "__CNF_CPPINCLUDES" => undef,
-      "__CNF_CXXFLAGS" => undef,
-      "__CNF_LDFLAGS" => undef,
-      "__CNF_LDLIBS" => undef,
+      "__CNF_CFLAGS" => "",
+      "__CNF_CPPDEFINES" => "",
+      "__CNF_CPPFLAGS" => "",
+      "__CNF_CPPINCLUDES" => "",
+      "__CNF_CXXFLAGS" => "",
+      "__CNF_LDFLAGS" => "",
+      "__CNF_LDLIBS" => "",
   },
   prefix => "",
   processor => "",
   rc4_int => "unsigned int",
-  sdirs => [ "objects", "md4", "md5", "sha", "mdc2", "hmac", "ripemd", "whrlpool", "poly1305", "blake2", "siphash", "sm3", "des", "aes", "rc2", "rc4", "idea", "bf", "cast", "camellia", "seed", "sm4", "chacha", "modes", "bn", "ec", "rsa", "dsa", "dh", "sm2", "dso", "engine", "buffer", "bio", "stack", "lhash", "rand", "err", "evp", "asn1", "pem", "x509", "x509v3", "conf", "txt_db", "pkcs7", "pkcs12", "comp", "ocsp", "ui", "cms", "ts", "srp", "cmac", "ct", "async", "kdf", "store" ],
+  sdirs => [ "objects", "md4", "md5", "sha", "mdc2", "hmac", "ripemd", "whrlpool", "poly1305", "blake2", "siphash", "sm3", "des", "aes", "rc2", "rc4", "idea", "aria", "bf", "cast", "camellia", "seed", "sm4", "chacha", "modes", "bn", "ec", "rsa", "dsa", "dh", "sm2", "dso", "engine", "buffer", "bio", "stack", "lhash", "rand", "err", "evp", "asn1", "pem", "x509", "x509v3", "conf", "txt_db", "pkcs7", "pkcs12", "comp", "ocsp", "ui", "cms", "ts", "srp", "cmac", "ct", "async", "kdf", "store" ],
   shlib_major => "1",
   shlib_minor => "1",
   shlib_version_history => "",
@@ -216,6 +216,7 @@ our %available_protocols = (
 
 our @disablables = (
   "afalgeng",
+  "aria",
   "asan",
   "asm",
   "async",
@@ -1742,6 +1743,20 @@ our %unified_info = (
                                 ],
                         },
                 },
+            "crypto/aria" =>
+                {
+                    "deps" =>
+                        [
+                            "crypto/aria/aria.o",
+                        ],
+                    "products" =>
+                        {
+                            "lib" =>
+                                [
+                                    "libcrypto",
+                                ],
+                        },
+                },
             "crypto/asn1" =>
                 {
                     "deps" =>
@@ -2404,6 +2419,7 @@ our %unified_info = (
                             "crypto/evp/e_aes.o",
                             "crypto/evp/e_aes_cbc_hmac_sha1.o",
                             "crypto/evp/e_aes_cbc_hmac_sha256.o",
+                            "crypto/evp/e_aria.o",
                             "crypto/evp/e_bf.o",
                             "crypto/evp/e_camellia.o",
                             "crypto/evp/e_cast.o",
@@ -3195,8 +3211,6 @@ our %unified_info = (
                 {
                     "deps" =>
                         [
-                            "ssl/packet.o",
-                            "ssl/tls13_enc.o",
                             "ssl/bio_ssl.o",
                             "ssl/d1_lib.o",
                             "ssl/d1_msg.o",
@@ -3226,6 +3240,8 @@ our %unified_info = (
                             "ssl/t1_trce.o",
                             "ssl/tls13_enc.o",
                             "ssl/tls_srp.o",
+                            "ssl/packet.o",
+                            "ssl/tls13_enc.o",
                         ],
                     "products" =>
                         {
@@ -5031,6 +5047,12 @@ our %unified_info = (
                     "include",
                 ],
             "crypto/aes/vpaes-x86_64.o" =>
+                [
+                    ".",
+                    "crypto/include",
+                    "include",
+                ],
+            "crypto/aria/aria.o" =>
                 [
                     ".",
                     "crypto/include",
@@ -7086,6 +7108,9 @@ our %unified_info = (
                 ],
             "crypto/evp/e_aria.o" =>
                 [
+                    ".",
+                    "crypto/include",
+                    "include",
                     "crypto",
                     "crypto/modes",
                 ],
@@ -10862,6 +10887,10 @@ our %unified_info = (
                 [
                     "crypto/aes/vpaes-x86_64.s",
                 ],
+            "crypto/aria/aria.o" =>
+                [
+                    "crypto/aria/aria.c",
+                ],
             "crypto/asn1/a_bitstr.o" =>
                 [
                     "crypto/asn1/a_bitstr.c",
@@ -12161,6 +12190,10 @@ our %unified_info = (
             "crypto/evp/e_aes_cbc_hmac_sha256.o" =>
                 [
                     "crypto/evp/e_aes_cbc_hmac_sha256.c",
+                ],
+            "crypto/evp/e_aria.o" =>
+                [
+                    "crypto/evp/e_aria.c",
                 ],
             "crypto/evp/e_bf.o" =>
                 [
@@ -13601,6 +13634,7 @@ our %unified_info = (
                     "crypto/aes/aesni-x86_64.o",
                     "crypto/aes/bsaes-x86_64.o",
                     "crypto/aes/vpaes-x86_64.o",
+                    "crypto/aria/aria.o",
                     "crypto/asn1/a_bitstr.o",
                     "crypto/asn1/a_d2i_fp.o",
                     "crypto/asn1/a_digest.o",
@@ -13926,6 +13960,7 @@ our %unified_info = (
                     "crypto/evp/e_aes.o",
                     "crypto/evp/e_aes_cbc_hmac_sha1.o",
                     "crypto/evp/e_aes_cbc_hmac_sha256.o",
+                    "crypto/evp/e_aria.o",
                     "crypto/evp/e_bf.o",
                     "crypto/evp/e_camellia.o",
                     "crypto/evp/e_cast.o",
